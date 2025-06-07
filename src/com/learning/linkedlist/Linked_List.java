@@ -46,18 +46,12 @@ public class Linked_List {
 
     public static void main(String[] args) {
         int[] arr={1,7,3,5,6,9,8};
-
         Node head=convertArrToLL(arr);
-
         print(head);
-
 
         /// head = insertHead(head, 100);
         /// head=new Node(100,head); //another way of inserting at the start
         /// System.out.println(checkIfPresent(head,9));
-
-
-
 
     }
 }

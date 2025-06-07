@@ -3,7 +3,7 @@ package com.learning.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Majority_ele_Using_HashMap {
+public class MajorityEleUsingHashMap_Better {
 
     // for (Map.Entry<String, Integer> e : map.entrySet())
     //            System.out.println("Key: " + e.getKey()
@@ -18,16 +18,14 @@ public class Majority_ele_Using_HashMap {
 //
 //            }
 //        }
-    static int majority_Hashmap(int[] arr) {
+     private static int majority_Hashmap(int[] arr) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int ele : arr) {
             map.put(ele, map.getOrDefault(ele, 0) + 1);
             if (map.get(ele) > arr.length / 2) {
                 return ele;
             }
-
         }
-        System.out.println(map);
         return -1;
     }
     //// Looping round HashMap

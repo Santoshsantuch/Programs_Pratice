@@ -1,3 +1,5 @@
+package com.learning.basicPrograms;
+
 import java.util.Scanner;
 
 public class fibnoacci {

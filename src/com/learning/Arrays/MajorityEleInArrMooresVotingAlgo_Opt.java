@@ -1,9 +1,6 @@
 package com.learning.Arrays;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class Majority_Element_MooresVotingAlgo {
+public class MajorityEleInArrMooresVotingAlgo_Opt {
 
     static int majority_MooresVotingAlgo(int[] arr) {
         int res=arr[0],count=0;
@@ -11,7 +8,7 @@ public class Majority_Element_MooresVotingAlgo {
             if(count==0){
                 res=ele;
             }
-            if(ele==res){
+            else if(ele==res){
                 count++;
             }else{
                 count--;

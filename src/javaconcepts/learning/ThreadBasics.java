@@ -1,18 +1,23 @@
 package javaconcepts.learning;
 
 class Task1 extends Thread{
+
         public void run(){ /// SIGNATURE
-        for(int i=101;i<=199;i++) {
+            System.out.print("\nTask1 Started");
+            for(int i=101;i<=199;i++) {
             System.out.print(i + " ");
-        }
-            System.out.print("\nTask1 Done");
+                }
+            System.out.println("\nTask1 Done");
         }
 }
 
 class Task2 implements Runnable{
 
+
+
     @Override
     public void run() {
+        System.out.print("\nTask2 Started");
         for(int i=201;i<=299;i++) {
             System.out.print(i + " ");
         }
