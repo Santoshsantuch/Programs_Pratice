@@ -4,15 +4,15 @@ import java.util.Arrays;
 
 public class EleMoveToEnd {
     private static int[] random(int[] arr,int ele){
-        for(int i=0;i< arr.length;i++){
+        int n = arr.length;
+        for(int i=0;i< n;i++){
             if(arr[i]==ele){
-                int temp=i;
-                for(int j=temp;j<arr.length-1;j++){
+                for(int j = i; j<n-1; j++){
                     arr[j]=arr[j+1];
                 }
             }
         }
-        arr[arr.length-1]=ele;
+        arr[n-1]=ele;
         return arr;
     }
     public static void main(String[] args) {

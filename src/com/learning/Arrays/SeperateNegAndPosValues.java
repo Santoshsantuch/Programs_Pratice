@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SeperateNegAndPosValues {
-    private static int[] seperate(int[] arr){
+    private static int[] seperatebrute(int[] arr){
         ArrayList<Integer> pos=new ArrayList<>();
         ArrayList<Integer> negs=new ArrayList<>();
         for(int i:arr){
@@ -38,7 +38,7 @@ public class SeperateNegAndPosValues {
 
     public static void main(String[] args) {
         int[] arr={1,-2,3,-4,5,-6,7,-8,9,-10};
-        int[] res=seperate(arr);
+        int[] res=seperatebrute(arr);
         System.out.println(Arrays.toString(res));
 
     }

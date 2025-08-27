@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class MergeSort {
 
     private static void merge(int[] arr, int low, int mid, int high) {
-        ArrayList<Integer> list = new ArrayList<>();
         int left = low;
         int right = mid + 1;
+        ArrayList<Integer> list = new ArrayList<>();
         while (left <= mid && right <= high) {
             if (arr[left] <= arr[right]) {
                 list.add(arr[left]);
@@ -38,8 +38,6 @@ public class MergeSort {
             mergeSort(arr, low, mid);
             mergeSort(arr, mid + 1, high);
             merge(arr, low, mid, high);
-
-
         return arr;
     }
 

@@ -1,6 +1,9 @@
 package com.learning.Arrays;
 
+import java.util.Arrays;
+
 public class RemoveDuplicatesInArray_ReturnLength {
+
 
     private static int removedup(int[] arr){
 
@@ -21,12 +24,13 @@ public class RemoveDuplicatesInArray_ReturnLength {
                 i++;
             }
         }
+        System.out.println(Arrays.toString(arr));
         return i+1;
     }
 
     public static void main(String[] args) {
-        int[] arr={1,1,2,6,5,4,4,3};
+        int[] arr={1,1,2,2,2,3,3};
         int len=removedup(arr);
-        System.out.println(len);
+       System.out.println(len);
     }
 }

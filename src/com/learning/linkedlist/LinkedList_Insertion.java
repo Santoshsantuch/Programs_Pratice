@@ -3,7 +3,7 @@ package com.learning.linkedlist;
 import com.learning.linkedlist.Node;
 
 public class LinkedList_Insertion {
-
+    Node head;
     ///  Converting LL to ARR
     private static Node convertArrToLL(int[] arr) {
         Node head = new Node(arr[0]); //Assigning head to first element - F.E is always head
@@ -18,7 +18,7 @@ public class LinkedList_Insertion {
     }
 
     /// /  Traversal the LL and printing the LL
-    private static void print(Node head) {
+    public void print() {
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -55,7 +55,6 @@ public class LinkedList_Insertion {
                 return head;
             }
         }
-
         if (k == 1) {
             Node newNode = new Node(value, head);
             return newNode;
@@ -99,6 +98,7 @@ public class LinkedList_Insertion {
 
     public static void main(String[] args) {
         int[] arr = {1, 7, 3, 5, 6, 9, 8};
+        LinkedList_Insertion list = new LinkedList_Insertion();
 
         Node head = convertArrToLL(arr);
 
@@ -107,6 +107,6 @@ public class LinkedList_Insertion {
         // head=insertKthelement(head,3,9);
         head = insertbeforeElement(head, 5, 9);
 
-        print(head);
+        list.print();
     }
 }

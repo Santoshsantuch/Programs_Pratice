@@ -74,13 +74,13 @@ public class LinkedList_Deletion {
         Node temp = head;
         Node prev = null;
 
-        while (temp != null) {
-            if (temp.data == ele) {
-                prev.next = temp.next;
-                break; // Break after deletion to avoid NullPointerException
-            }
+        while (temp != null && temp.data!=ele) {
+
             prev = temp;
             temp = temp.next;
+        }
+        if(temp != null) {
+            prev.next = temp.next;
         }
         return head;
     }
@@ -134,7 +134,7 @@ public class LinkedList_Deletion {
         int[] arr = {1, 7, 3, 5, 6, 9, 8};
 
         Node head = convertArrToLL(arr);
-        head = deletekthPositionUpdated(head, 3);
+        head = deleteEleUpdated(head, 3);
         print(head);
 
         // head=deletehead(head);

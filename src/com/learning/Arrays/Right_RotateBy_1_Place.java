@@ -2,7 +2,7 @@ package com.learning.Arrays;
 
 
 import java.util.*;
-class Solution {
+public class Right_RotateBy_1_Place {
     public static void main(String[] args) {
 
 

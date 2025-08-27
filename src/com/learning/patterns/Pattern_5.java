@@ -1,5 +1,10 @@
 package com.learning.patterns;
 
+/// * * * * *
+///  * * * *
+///   * * *
+///    * *
+///     *
 public class Pattern_5 {
     public static void main(String[] args) {
         int n = 5;

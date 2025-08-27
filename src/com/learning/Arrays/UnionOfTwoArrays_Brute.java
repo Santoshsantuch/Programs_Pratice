@@ -1,12 +1,10 @@
 package com.learning.Arrays;
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class UnionOfTwoArrays_Brute {
-    private static int[] union(int[] arr1,int[] arr2){
+
+    private static int[] unionBrute(int[] arr1,int[] arr2){
 
         Set<Integer> set=new TreeSet<>();
         for(int i: arr1){
@@ -22,6 +20,40 @@ public class UnionOfTwoArrays_Brute {
         return union;
     }
 
+    private static List<Integer> unionOpt(int[] arr1, int[] arr2) {
+        int n1 = arr1.length;
+        int n2 = arr2.length;
+        int i = 0, j = 0;
+        List<Integer> UnionArr = new ArrayList<>();
+        while (i < n1 && j < n2) {
+            if (arr1[i] <= arr2[j]) {
+                if (UnionArr.isEmpty() || UnionArr.get(UnionArr.size() - 1) != arr1[i])
+                    UnionArr.add(arr1[i]);
+                i++;
+            }
+            else {
+                if (UnionArr.isEmpty() || UnionArr.get(UnionArr.size() - 1) != arr2[j])
+                    UnionArr.add(arr2[j]);
+                j++;
+            }
+        }
+
+        while (i < n1) // IF any element left in arr1
+        {
+            if (UnionArr.get(UnionArr.size() - 1) != arr1[i])
+                UnionArr.add(arr1[i]);
+            i++;
+        }
+        while (j < n2) // If any elements left in arr2
+        {
+            if (UnionArr.get(UnionArr.size() - 1) != arr2[j])
+                UnionArr.add(arr2[j]);
+            j++;
+        }
+        return UnionArr;
+
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n1 = sc.nextInt();
@@ -34,7 +66,7 @@ public class UnionOfTwoArrays_Brute {
         for (int i = 0; i < n2; i++) {
             arr2[i] = sc.nextInt();
         }
-        int[] res = union(arr1,arr2);
+        int[] res = unionBrute(arr1,arr2);
         System.out.println(Arrays.toString(res));
     }
 }

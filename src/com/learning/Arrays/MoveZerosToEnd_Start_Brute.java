@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MoveZerosToEnd_Start_BruteForce {
+public class MoveZerosToEnd_Start_Brute {
 
     static int[] move_zeros(int[] arr) {
         int n= arr.length;

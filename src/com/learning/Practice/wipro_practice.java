@@ -12,5 +12,6 @@ public class wipro_practice {
             }
         }
         System.out.println(count);
+        sc.close();
     }
 }
